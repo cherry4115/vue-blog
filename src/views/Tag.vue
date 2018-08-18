@@ -1,9 +1,9 @@
 <template>
-  <div>home</div>
+  <div>#标签# 奋力开发中...</div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Tag',
 };
 </script>

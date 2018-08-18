@@ -4,9 +4,28 @@
       <router-link to="/">Home888</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <router-view/>
+    <el-container>
+      <el-aside width="250px" class="aside">
+        <blog-frame ref="BlogFrame"></blog-frame>
+      </el-aside>
+      <el-main>
+        <router-view/>
+      </el-main>
+    </el-container>
   </div>
 </template>
+
+<script>
+import BlogFrame from './components/BlogFrame.vue'
+
+export default {
+  name: 'App',
+
+  components: {
+    BlogFrame
+  }
+};
+</script>
 
 <style lang="less">
 #app {
@@ -15,15 +34,10 @@
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100%;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+
+  .aside {
+    background-color: #202020;
+    height: 100vh;
   }
 }
 </style>
